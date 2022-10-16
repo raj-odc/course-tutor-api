@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_15_135001) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_16_085741) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_courses_on_name", unique: true
+  end
+
+  create_table "tutors", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email"
+    t.boolean "active", default: true
+    t.integer "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_tutors_on_course_id"
+    t.index ["email"], name: "index_tutors_on_email", unique: true
+    t.index ["name"], name: "index_tutors_on_name"
   end
 
 end
