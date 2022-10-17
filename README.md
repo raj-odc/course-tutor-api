@@ -14,6 +14,7 @@
   - Rubocop added for ruby style guide
 
 # Setup the application
+  - **bundle install**
   - run the command: **rake db:setup**
 
 # Start the application
@@ -27,3 +28,7 @@
   - Continuos deployment
   - Heroku app and run
   - Rubycritic for code quality check
+
+# Ruby version and Rails version
+  - ruby 3.1.0p0
+  - Rails 7.0.4
