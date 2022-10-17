@@ -25,6 +25,7 @@
 
 # Pending
   - Paginated api's not builded, assumption just few courses available in the institution
+  - Active check for tutor available or not check not added
   - Continuos deployment
   - Heroku app and run
   - Rubycritic for code quality check
