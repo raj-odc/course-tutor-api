@@ -10,6 +10,8 @@
 
 # Implementation
   - Created logic for the course and tutor mapping
+  - Assumption unique email for tutor and unique name for course
+  - No authentication done, all are open api's, no CSRF checks added
   - Test cases for the controller api and model validation
   - Rubocop added for ruby style guide
 
@@ -29,6 +31,7 @@
   - Continuos deployment
   - Heroku app and run
   - Rubycritic for code quality check
+  - Security checks not done
 
 # Ruby version and Rails version
   - ruby 3.1.0p0
