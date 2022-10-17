@@ -28,10 +28,11 @@
 # Pending
   - Paginated api's not builded, assumption just few courses available in the institution
   - Active check for tutor available or not check not added
+  - Email regex validation not added
   - Continuos deployment
   - Heroku app and run
   - Rubycritic for code quality check
-  - Security checks not done
+  - Security checks are not done
 
 # Ruby version and Rails version
   - ruby 3.1.0p0
