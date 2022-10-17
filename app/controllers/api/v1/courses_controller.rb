@@ -1,8 +1,8 @@
 class Api::V1::CoursesController < ApplicationController
   def index
-    courses = Course.all
+    courses = Course.all.includes(:tutors)
     if courses.present?
-      render json: courses.as_json(except: [:created_at, :updated_at]), status: :ok
+      render json: courses, status: :ok
     else
       render json: {error: 'Courses are not found'}, status: :not_found
     end
