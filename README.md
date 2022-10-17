@@ -1,24 +1,27 @@
-# README
+# API Call's
+  # GET
+  - /api/v1/courses - Get all courses list
+  - /api/v1/courses/1/tutors - Get tutor based on course
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  # POST
+  - /api/v1/courses - Create courses
+  - /api/v1/courses/1/tutors - Create tutor based on course
 
-Things you may want to cover:
 
-* Ruby version
+# Implementation
+  - Created logic for the course and tutor mapping
+  - Test cases for the controller api and model validation
+  - Rubocop added for ruby style guide
 
-* System dependencies
+# Setup the application
+  - run the command: **rake db:setup** and **rake db:seed**
+  - start the application: **rails s**
 
-* Configuration
+# Test the application
+  - run the command: **rspec**
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Pending
+  - Paginated api's not builded, assumption just few courses available in the institution
+  - Continuos deployment
+  - Heroku app and run
+  - Rubycritic for code quality check
