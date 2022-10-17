@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Api::V1::Tutors", type: :request do
+RSpec.describe 'Api::V1::Tutors', type: :request do
   describe 'GET /index' do
     before do
       course = FactoryBot.create(:course)
@@ -18,7 +20,6 @@ RSpec.describe "Api::V1::Tutors", type: :request do
   end
 
   describe 'POST /create' do
-
     context 'with valid parameters' do
       let!(:name) { Faker::Name.name }
       let!(:email) { Faker::Internet.email }
@@ -27,8 +28,8 @@ RSpec.describe "Api::V1::Tutors", type: :request do
         course = FactoryBot.create(:course)
         post "/api/v1/courses/#{course.id}/tutors", params: {
           tutor: {
-            name: name,
-            email: email
+            name:,
+            email:
           }
         }
       end

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Api::V1::Courses", type: :request do
+RSpec.describe 'Api::V1::Courses', type: :request do
   describe 'GET /index' do
     context 'without tutors attached' do
       before do
@@ -46,8 +48,8 @@ RSpec.describe "Api::V1::Courses", type: :request do
       before do
         post '/api/v1/courses', params: {
           course: {
-            name: name,
-            description: description
+            name:,
+            description:
           }
         }
       end

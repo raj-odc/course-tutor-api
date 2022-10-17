@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,26 +12,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_16_085741) do
-  create_table "courses", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_courses_on_name", unique: true
+ActiveRecord::Schema[7.0].define(version: 20_221_016_085_741) do
+  create_table 'courses', force: :cascade do |t|
+    t.string 'name'
+    t.text 'description'
+    t.boolean 'active', default: true
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['name'], name: 'index_courses_on_name', unique: true
   end
 
-  create_table "tutors", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email"
-    t.boolean "active", default: true
-    t.integer "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_tutors_on_course_id"
-    t.index ["email"], name: "index_tutors_on_email", unique: true
-    t.index ["name"], name: "index_tutors_on_name"
+  create_table 'tutors', force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'email'
+    t.boolean 'active', default: true
+    t.integer 'course_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['course_id'], name: 'index_tutors_on_course_id'
+    t.index ['email'], name: 'index_tutors_on_email', unique: true
+    t.index ['name'], name: 'index_tutors_on_name'
   end
-
 end
