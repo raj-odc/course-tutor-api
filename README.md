@@ -1,11 +1,11 @@
 # API Call's
   # GET
   - /api/v1/courses - Get all courses list
-  - /api/v1/courses/1/tutors - Get tutor based on course
+  - /api/v1/courses/{course_id}/tutors - Get tutor based on course
 
   # POST
   - /api/v1/courses - Create courses
-  - /api/v1/courses/1/tutors - Create tutor based on course
+  - /api/v1/courses/{course_id}/tutors - Create tutor based on course
 
 
 # Implementation
@@ -14,8 +14,10 @@
   - Rubocop added for ruby style guide
 
 # Setup the application
-  - run the command: **rake db:setup** and **rake db:seed**
-  - start the application: **rails s**
+  - run the command: **rake db:setup**
+
+# Start the application
+  - **rails s**
 
 # Test the application
   - run the command: **rspec**
